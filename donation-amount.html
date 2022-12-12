@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Location</title>
+    <title>Donation Amount</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="Location">
+
+<body class="Donation-Amount">
     <div class="content">
 
         <section id="header">
@@ -18,29 +20,27 @@
             <div id="card">
                 <div class="upper-half">
                     <div id="card-title-1">
-                        <h1>MAC centres near you</h1>
+                        <h1>Choose A Donation Amount</h1>
                     </div>
 
                     <div class="location-selection">
                         <div class="location-menu">
                             <div class="test">
-                                <input type="radio" name="locationChoice" value="Masjid Toronto" checked>
-                                <label for="masjid Toronto">Masjid Toronto</label>
+                                <input type="radio" name="AmountChoice" value="10" checked>
+                                <label for="10">$10</label>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                             </div>
 
-                            <div>
-                                <input type="radio" name="locationChoice" value="ICCO">
-                                <label for="ICCO">ICCO</label>
+                            <div class="test2">
+                                <input type="radio" name="AmountChoice" value="25">
+                                <label for="25">$25</label>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                             </div>
 
-                            <div>
-                                <input type="radio" name="locationChoice" id="dropdown">
-                                <label for="dropdown"><select name="masjid" id="masjid">
-                                    <option value="initial">Choose Another location</option>
-                                    <option value="item1">Edmonton</option>
-                                    <option value="item2">Calgary</option>
-                                    <option value="item3">Montreal</option>
-                                    </select></label>
+                            <div class="test2">
+                                <input type="radio" name="AmountChoice" value="50">
+                                <label for="50">$50</label>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                             </div>
                         </div>
                     </div>
@@ -48,34 +48,24 @@
 
                 <div class="lower-half">
                     <div id="card-title-2">
-                        <h1>Choose a category</h1>
+                        <h1>Choose a donation frequency</h1>
                     </div>
 
                     <div class="category-selection">
                         <div class="category-menu">
                             <div class="test">
-                                <input type="radio" name="categoryChoice" value="Ramadan" checked>
-                                <label for="Ramadan">Ramadan</label>
+                                <input type="radio" name="categoryChoice" value="Monthly" checked>
+                                <label for="Monthly">Monthly</label>
                             </div>
 
                             <div>
-                                <input type="radio" name="categoryChoice" value="Zakat Al Mal">
-                                <label for="Zakat Al Mal">Zakat Al Mal</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="categoryChoice" value="Zakat Al Fitr">
-                                <label for="Zakat Al Fitr">Zakat Al Fitr</label>
-                            </div>
-
-                            <div>
-                                <input type="radio" name="categoryChoice" value="Most Needed">
-                                <label for="Most Needed">Most Needed</label>
+                                <input type="radio" name="categoryChoice" value="One Time">
+                                <label for="One Time">One Time</label>
                             </div>
                         </div>
                     </div>
 
-                    <a href="./donation-amount.html"><button id="next-btn">Next</button></a>
+                    <a href="./information.html"><button id="next-btn">Donate Now</button></a>
                 </div>
                 
             </div>
@@ -129,6 +119,6 @@
             </div>
         </section>
     </div>
-
 </body>
+
 </html>
