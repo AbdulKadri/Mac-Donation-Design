@@ -162,9 +162,9 @@ ul {
 
 fieldset {
     height: 90%;
-    width: 90%;
+    width: 80%;
     border: none;
-    margin: 10px 20px;
+    margin: 10px 40px;
     display: flex;
     flex-direction: column;
 }
@@ -260,5 +260,10 @@ legend {
     .footer {
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    fieldset {
+        width: 90%;
+        margin: 10px 20px;
     }
 }
