@@ -7,41 +7,39 @@
     <title>Location</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="Location">
+<body class="location">
     <div class="content">
 
-        <section id="header">
+        <section class="header">
             <img src="./images/Mac-logo.svg" alt="Mac Logo" width="400px" height="50px">
         </section>
 
-        <section id="body">
-            <div id="card">
+        <section class="body">
+            <div class="card">
                 <div class="upper-half">
                     <div id="card-title-1">
                         <h1>MAC centres near you</h1>
                     </div>
 
-                    <div class="location-selection">
-                        <div class="location-menu">
-                            <div class="test">
-                                <input type="radio" name="locationChoice" value="Masjid Toronto" checked>
-                                <label for="masjid Toronto">Masjid Toronto</label>
-                            </div>
+                    <div class="Option-1">
+                        <div class="test">
+                            <input type="radio" name="locationChoice" value="Masjid Toronto" checked>
+                            <label for="masjid Toronto">Masjid Toronto</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" name="locationChoice" value="ICCO">
-                                <label for="ICCO">ICCO</label>
-                            </div>
+                        <div>
+                            <input type="radio" name="locationChoice" value="ICCO">
+                            <label for="ICCO">ICCO</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" name="locationChoice" id="dropdown">
-                                <label for="dropdown"><select name="masjid" id="masjid">
-                                    <option value="initial">Choose Another location</option>
-                                    <option value="item1">Edmonton</option>
-                                    <option value="item2">Calgary</option>
-                                    <option value="item3">Montreal</option>
-                                    </select></label>
-                            </div>
+                        <div>
+                            <input type="radio" name="locationChoice">
+                            <input type="text" list="cities" id="otherLocations" placeholder="Other">
+                            <datalist id="cities">
+                                <option> Edmonton </option>
+                                <option> Calgary </option>
+                                <option> Montreal </option>
+                            </datalist>
                         </div>
                     </div>
                 </div>
@@ -51,38 +49,36 @@
                         <h1>Choose a category</h1>
                     </div>
 
-                    <div class="category-selection">
-                        <div class="category-menu">
-                            <div class="test">
-                                <input type="radio" name="categoryChoice" value="Ramadan" checked>
-                                <label for="Ramadan">Ramadan</label>
-                            </div>
+                    <div class="Option-2">
+                        <div class="test">
+                            <input type="radio" name="categoryChoice" value="Ramadan" checked>
+                            <label for="Ramadan">Ramadan</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" name="categoryChoice" value="Zakat Al Mal">
-                                <label for="Zakat Al Mal">Zakat Al Mal</label>
-                            </div>
+                        <div>
+                            <input type="radio" name="categoryChoice" value="Zakat Al Mal">
+                            <label for="Zakat Al Mal">Zakat Al Mal</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" name="categoryChoice" value="Zakat Al Fitr">
-                                <label for="Zakat Al Fitr">Zakat Al Fitr</label>
-                            </div>
+                        <div>
+                            <input type="radio" name="categoryChoice" value="Zakat Al Fitr">
+                            <label for="Zakat Al Fitr">Zakat Al Fitr</label>
+                        </div>
 
-                            <div>
-                                <input type="radio" name="categoryChoice" value="Most Needed">
-                                <label for="Most Needed">Most Needed</label>
-                            </div>
+                        <div>
+                            <input type="radio" name="categoryChoice" value="Most Needed">
+                            <label for="Most Needed">Most Needed</label>
                         </div>
                     </div>
 
-                    <a href="./donation-amount.html"><button id="next-btn">Next</button></a>
+                    <a href="./donation-amount.html"><button class="btn">Next</button></a>
                 </div>
                 
             </div>
 
         </section>
 
-        <section id="footer">
+        <section class="footer">
             <div>
                 <img src="./images/Mac-logo.svg" alt="Mac Logo" width="200px" height="50px">
             </div>

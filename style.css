@@ -15,19 +15,19 @@ body {
     min-height: 100vh;
 }
 
-#header {
+.header {
     align-self: center;
     flex: 0 1 auto;
     padding: 2%;
 }
 
-#body {
+.body {
     flex: 1 1 auto;
     color: white;
     width: 100%;
 }
 
-#card {
+.card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,11 +37,15 @@ body {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
-#card > div {
+.card > div {
     margin: 5% 10%;
 }
 
-.location-menu {
+#card-title-1 {
+    margin-bottom: 10px;
+}
+
+.Option-1 {
     display: flex;
     flex-direction: column;
     font-size: 2rem;
@@ -50,7 +54,7 @@ body {
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
-.location-menu > div {
+.Option-1 > div {
     border: 1px solid #3b874f;
     height: 75px;
     border: 1px solid black;
@@ -59,23 +63,36 @@ body {
     gap: 10%;
 }
 
+input[type='radio'] { 
+    margin-left: 10px;
+    transform: scale(1.5); 
+}
+
+input[type="radio"]:checked {
+    accent-color: black;
+}
+
+#otherLocations {
+    width: 80%;
+    height: 80%;
+    font-size: 2rem;
+    outline: none;
+    border: none;
+}
+ 
 .lower-half {
     display: flex;
     flex-direction: column;
 }
 
-.lower-half > a {
-    align-self: flex-end;
-}
-
-.category-menu {
+.Option-2 {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     row-gap: 5px;
 }
 
-.category-menu > div {
+.Option-2 > div {
     margin: 10px 0;
     padding: 20px;
     background-color: white;
@@ -86,38 +103,34 @@ body {
     gap: 10px;
 }
 
-.category-menu input[type='radio'] {
+.Option-2 input[type='radio'] {
     margin-left: 0;
 }
 
-#next-btn {
+.lower-half > a,
+fieldset > a {
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.btn {
     border: none;
     text-decoration: none;
     background-color: white;
     color: gray;
-    width: 150px;
+    width: 200px;
     padding: 10px 5px;
     border-radius: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    font-size: 1.1em;
 }
 
-#next-btn:hover {
+.btn:hover {
     color: black;
 }
 
-input[type='radio'] { 
-    margin-left: 10px;
-    transform: scale(1.5); 
-}
-
-input[type="radio"]:checked {
-    /* background-color: black; */
-    accent-color: black;
-}
-  
-
-#footer {
+.footer {
     flex: 0 1 40px;
     display: flex;
     flex-direction: column;
@@ -131,8 +144,9 @@ input[type="radio"]:checked {
     gap: 10%;
 }
 
+/* Adding dark green background to selected option */
 .test,
-.category-menu > .test {
+.Option-2 > .test {
     background-color: #3b874f;
 }
 
@@ -140,73 +154,36 @@ ul {
     list-style-type: none;
 }
 
-@media (min-width: 900px) {
-    
-    #body {
-        background-image: url(./images/Background-image.png);
-        background-size: cover;
-    }
-
-    #card {
-        margin: 5% 10%;
-        width: 500px;
-        height: 600px;
-    }
-
-    #footer {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
-.test > p,
-.test2 > p {
+.values > p {
     font-size: 1rem;
     color: black;
     margin-right: 10px;
 }
 
 fieldset {
-    height: 95%;
-    width: 95%;
+    height: 90%;
+    width: 90%;
     border: none;
-    margin: 10px;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.form_info {
+.top-form {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 40px;
 }
 
-.form_info > * {
-    
-}
-
-#firstNameDiv {
-    /* grid-column: span 2; */
-    grid-column-start: 1 / 3;
-}
-
-#streetAdressDiv {
-    grid-column: span 2;
-}
-
 .input {
-  display: flex;
-  flex-direction: column-reverse;
-  padding-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 10px;
 }
 
 input:focus {
     outline: 0;
-}
-
-.input_label {
-    /* color: #8597a3; */
-    /* position: absolute; */
-    /* top: 20px; */
 }
 
 .input_field {
@@ -220,25 +197,68 @@ input::placeholder {
     color: #9dc9b0;
 }
 
-.test4 {
+#otherLocations::placeholder {
+    color: gray;
+}
+
+#streetAdressDiv,
+#creditCardDiv {
+    grid-column: span 2;
+}
+
+#states_postalCode {
     display: grid;
     grid-template-columns: 100px 100px;
 }
 
-.test4 div {
-    margin-right: 10px;
+#states {
+    margin-right: 20px;
 }
 
 #emailAdressDiv {
     grid-column: span 2;
 }
 
-.form_info2 {
+.bottom-form {
     display: grid;
-    gap: 10px 20px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 40px;
 }
 
-fieldset > form > a {
-    grid-column-start: 1;
-    grid-row-start: 5;
+.bottom-form > div {
+    margin-top: 10px;
+}
+
+legend {
+    font-size: 2em;
+}
+
+.expirationDate {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    column-gap: 10px;
+}
+
+#ExpirationLabel {
+    grid-column: span 2;
+}
+
+@media (min-width: 900px) {
+    
+    .body {
+        background-image: url(./images/Background-image.png);
+        background-size: cover;
+    }
+
+    .card {
+        margin: 5% 10%;
+        width: 500px;
+        height: 600px;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
