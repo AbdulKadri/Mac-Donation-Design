@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="location">
@@ -15,24 +16,24 @@
         </section>
 
         <section class="body">
-            <div class="card">
+            <div class="card" id="card">
                 <div class="upper-half">
                     <div id="card-title-1">
                         <h1>MAC centres near you</h1>
                     </div>
 
                     <div class="Option-1">
-                        <div class="test">
+                        <div class="choice">
                             <input type="radio" name="locationChoice" value="Masjid Toronto" checked>
                             <label for="masjid Toronto">Masjid Toronto</label>
                         </div>
 
-                        <div>
+                        <div class="choice">
                             <input type="radio" name="locationChoice" value="ICCO">
                             <label for="ICCO">ICCO</label>
                         </div>
 
-                        <div>
+                        <div class="choice">
                             <input type="radio" name="locationChoice">
                             <input type="text" list="cities" id="otherLocations" placeholder="Other">
                             <datalist id="cities">
@@ -50,28 +51,29 @@
                     </div>
 
                     <div class="Option-2">
-                        <div class="test">
+                        <div class="choice">
                             <input type="radio" name="categoryChoice" value="Ramadan" checked>
                             <label for="Ramadan">Ramadan</label>
                         </div>
 
-                        <div>
+                        <div class="choice">
                             <input type="radio" name="categoryChoice" value="Zakat Al Mal">
                             <label for="Zakat Al Mal">Zakat Al Mal</label>
                         </div>
 
-                        <div>
+                        <div class="choice">
                             <input type="radio" name="categoryChoice" value="Zakat Al Fitr">
                             <label for="Zakat Al Fitr">Zakat Al Fitr</label>
                         </div>
 
-                        <div>
+                        <div class="choice">
                             <input type="radio" name="categoryChoice" value="Most Needed">
                             <label for="Most Needed">Most Needed</label>
                         </div>
                     </div>
 
-                    <a href="./donation-amount.html"><button class="btn">Next</button></a>
+                    <a href="#" class="prev-page"> <button> <u> Go back </u> </button></a>
+                    <a href="./donation-amount.html" class="next-page"><button class="next-btn">Next</button></a>
                 </div>
                 
             </div>
